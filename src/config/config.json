@@ -1,0 +1,59 @@
+{
+  "about": {
+    "title": "About me",
+    "sub_title": "My history in the world wide web univers",
+    "descriptions": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+  },
+  "contact": {
+    "title": "Contact me",
+    "sub_title": "Get in touch",
+    "descriptions": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+  },
+  "realizations": {
+    "title": "Realizations",
+    "sub_title": "Realize by me",
+    "descriptions": "The applications made by me",
+    "applications": [
+      {
+        "app_name": "Discovery of Africa",
+        "app_descriptions": "Quiz app with the african flag",
+        "app_image": "dofa.png",
+        "app_url": "www.dofa.com"
+      },
+      {
+        "app_name": "BXStages",
+        "app_descriptions": "Where you should found the best internship in bxl and arround",
+        "app_image": "bxs.png",
+        "app_url": "www.bxs.com"
+      },
+      {
+        "app_name": "Klimaat",
+        "app_descriptions": "Be aware of the weather",
+        "app_image": "klm.png",
+        "app_url": "www.klimaat.com"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "sub_title": "My best technos and tools",
+    "descriptions": "The list of skills",
+    "technologies": [
+      {
+        "techno_name": "ReactJS",
+        "techno_descriptions": "The best frontend framework",
+        "techno_image": "react.png"
+      },
+      {
+        "techno_name": "Laravel",
+        "techno_descriptions": "The best backend framework",
+        "techno_image": "laravel.png"
+      },
+      {
+        "techno_name": "Git",
+        "techno_descriptions": "The best tools for track app version",
+        "techno_image": "git.png"
+      }
+    ]
+  }
+}
