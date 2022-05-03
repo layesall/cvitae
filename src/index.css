@@ -3,10 +3,11 @@
 ------------------------------
 */
 :root {
-  --primary: #4E6E53;
-  --secondary: #fff;
+  --primary: #112211;
+  --secondary: #E2F0D2;
   --light: #eee;
-  --dark: #333;
+  --dark: #010101;
+  --green: #148F06;
 }
 
 /*

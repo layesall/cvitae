@@ -1,13 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Welcome.css";
 
-import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-import cvdata from "../../config/config.json"
+import cvdata from "../../config/config.json";
 
 export default function Welcome() {
-
   const [cvitae, setCvitae] = useState([]);
 
   useEffect(() => {
@@ -15,22 +13,15 @@ export default function Welcome() {
       setCvitae(cvdata);
     };
   }, []);
-  
+
   console.log(cvitae);
 
   return (
-    <div className="welcome-component">
-      <Header />
-
-      <div className="welcome-box">
-        <h2>Welcome in</h2>
-        <h1>Nikouone</h1>
-        <p>
-          A simple starter kit with necessary dependencies for a React project .
-        </p>
+    <>
+      <div id="about" className="welcome-component">
+        <h1>Welcome</h1>
       </div>
-
       <Footer />
-    </div>
+    </>
   );
 }
