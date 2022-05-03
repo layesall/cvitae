@@ -1,0 +1,22 @@
+.app-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  color: var(--light);
+  background: var(--primary);
+}
+
+.app-component.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  color: var(--dark);
+}

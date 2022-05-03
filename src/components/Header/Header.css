@@ -1,0 +1,61 @@
+/*
+---| header-component
+------------------------------
+*/
+.header-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 5vmin;
+  margin-bottom: 3rem;
+  z-index: 100;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-brand {
+  color: var(--light) !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.nav-link-group {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-link-item {
+  color: var(--light) !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: bolder !important;
+  letter-spacing: 3px;
+  margin: 5px;
+}
+
+.nav-link-icon {
+  margin-right: 5px;
+  font-size: 2rem;
+}
+
+.nav-toggle {
+  background: var(--light);
+}
+
+.logo {
+  width: 200px;
+  object-fit: cover;
+}

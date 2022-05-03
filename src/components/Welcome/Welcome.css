@@ -1,0 +1,26 @@
+.welcome-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  color: var(--light);
+  border-radius: 5px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.welcome-component h1{
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.welcome-component h2{
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.welcome-component p{
+  font-size: 18px;
+}

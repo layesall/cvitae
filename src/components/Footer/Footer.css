@@ -1,0 +1,26 @@
+/*
+---| footer-component
+------------------------------
+*/
+
+.footer-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  padding: 1rem;
+}
+
+.footer-top {
+  color: inherit;
+}
+
+.footer-copyright {
+  text-transform: uppercase;
+}
+
+.footer-author {
+  color: var(--light);
+  text-decoration: none;
+}
