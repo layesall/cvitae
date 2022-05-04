@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaUser,
-  FaCode,
-  FaTools,
+  FaHome,
+  FaThLarge,
   FaEnvelope,
   FaFileExport,
   FaLinkedin,
@@ -18,16 +17,12 @@ export default function Footer() {
     <footer className="footer-component">
       <div className="footer-top">
         <div className="ft-nav-group">
-          <a href="/" className="ft-nav-link" title="Layesall">
-            <FaUser className="ft-nav-icon" />
+          <a href="#about" className="ft-nav-link" title="Layesall">
+            <FaHome className="ft-nav-icon" />
             <span className="ft-nav-text">Layesall</span>
           </a>
-          <a href="#about" className="ft-nav-link" title="Layesall">
-            <FaUser className="ft-nav-icon" />
-            <span className="ft-nav-text">Skills</span>
-          </a>
-          <a href="#portfolio" className="ft-nav-link" title="Realisations">
-            <FaCode className="ft-nav-icon" />
+          <a href="#realizations" className="ft-nav-link" title="Realisations">
+            <FaThLarge className="ft-nav-icon" />
             <span className="ft-nav-text">Réalisations</span>
           </a>
           <a href="#contact" className="ft-nav-link" title="Contact">
