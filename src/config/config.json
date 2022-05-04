@@ -7,9 +7,9 @@
   },
   "curriculum": {
     "realizations": {
-      "title": "Realizations",
+      "title": "Réalisations",
       "sub_title": "Realize by me",
-      "descriptions": "The applications made by me",
+      "descriptions": "Made by myself",
       "projects": [
         {
           "project_name": "Discovery of Africa",
@@ -20,32 +20,26 @@
         {
           "project_name": "BXStages",
           "project_descriptions": "find the best internship in bxl and arround",
-          "project_image": "bxs.png",
+          "project_image": "bxstages.png",
           "project_url": "www.bxs.com"
         },
         {
           "project_name": "Klimaat",
           "project_descriptions": "Be aware of the weather",
-          "project_image": "klm.png",
+          "project_image": "klimaat.png",
           "project_url": "www.klimaat.com"
         },
         {
-          "project_name": "New project 1",
-          "project_descriptions": "The new project made by me",
-          "project_image": "project.png",
-          "project_url": "www.projecturl.com"
+          "project_name": "Findcity",
+          "project_descriptions": "Search and get informations about city",
+          "project_image": "findcity.png",
+          "project_url": "www.findcity.com"
         },
         {
-          "project_name": "New project 2",
-          "project_descriptions": "The new project made by me",
-          "project_image": "project.png",
-          "project_url": "www.projecturl.com"
-        },
-        {
-          "project_name": "New project 3",
-          "project_descriptions": "The new project made by me",
-          "project_image": "project.png",
-          "project_url": "www.projecturl.com"
+          "project_name": "Mathequal",
+          "project_descriptions": "Fast and simple Math calculator",
+          "project_image": "mathequal.png",
+          "project_url": "www.mathequal.com"
         }
       ]
     },
@@ -68,21 +62,6 @@
           "techno_name": "Git",
           "techno_descriptions": "The best tools for track app version",
           "techno_image": "git.png"
-        },
-        {
-          "techno_name": "New techno 1",
-          "techno_descriptions": "The best new techno",
-          "techno_image": "techno.png"
-        },
-        {
-          "techno_name": "New techno 2",
-          "techno_descriptions": "The best new techno",
-          "techno_image": "techno.png"
-        },
-        {
-          "techno_name": "New techno 2",
-          "techno_descriptions": "The best new techno",
-          "techno_image": "techno.png"
         }
       ]
     }

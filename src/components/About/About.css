@@ -9,7 +9,6 @@
   background: var(--dark);
   width: 100%;
   min-height: calc(100vh - 103px);
-  margin-bottom: 3rem;
 }
 
 .about-image {
@@ -31,12 +30,12 @@
 
 .about-item-title {
   color: var(--green);
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: bolder;
 }
 
 .about-item-subtitle {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
 }
 
