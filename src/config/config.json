@@ -1,59 +1,97 @@
 {
-  "about": {
-    "title": "About me",
-    "sub_title": "My history in the world wide web univers",
-    "descriptions": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+  "applications": {
+    "app_name": "Layesall",
+    "app_shortname": "Développeur d'application web",
+    "app_descriptions": "Bonjour moi c'est Sall, jeune développeur d'applications web spécialisé dans le développement Back-end ou si vous préférez, côté serveur et base de données. Actuellement basé à Bruxelles en Belgique. Je suis passionné et déterminé pour devenir un forgeron du web.",
+    "app_copyright": "2022 | Layesall"
   },
-  "contact": {
-    "title": "Contact me",
-    "sub_title": "Get in touch",
-    "descriptions": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+  "curriculum": {
+    "realizations": {
+      "title": "Realizations",
+      "sub_title": "Realize by me",
+      "descriptions": "The applications made by me",
+      "projects": [
+        {
+          "project_name": "Discovery of Africa",
+          "project_descriptions": "Quiz app with the african flag",
+          "project_image": "dofa.png",
+          "project_url": "www.dofa.com"
+        },
+        {
+          "project_name": "BXStages",
+          "project_descriptions": "find the best internship in bxl and arround",
+          "project_image": "bxs.png",
+          "project_url": "www.bxs.com"
+        },
+        {
+          "project_name": "Klimaat",
+          "project_descriptions": "Be aware of the weather",
+          "project_image": "klm.png",
+          "project_url": "www.klimaat.com"
+        },
+        {
+          "project_name": "New project 1",
+          "project_descriptions": "The new project made by me",
+          "project_image": "project.png",
+          "project_url": "www.projecturl.com"
+        },
+        {
+          "project_name": "New project 2",
+          "project_descriptions": "The new project made by me",
+          "project_image": "project.png",
+          "project_url": "www.projecturl.com"
+        },
+        {
+          "project_name": "New project 3",
+          "project_descriptions": "The new project made by me",
+          "project_image": "project.png",
+          "project_url": "www.projecturl.com"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Favorit",
+      "sub_title": "My best technos and tools",
+      "descriptions": "The list of skills",
+      "technologies": [
+        {
+          "techno_name": "ReactJS",
+          "techno_descriptions": "The best frontend framework",
+          "techno_image": "react.png"
+        },
+        {
+          "techno_name": "Laravel",
+          "techno_descriptions": "The best backend framework",
+          "techno_image": "laravel.png"
+        },
+        {
+          "techno_name": "Git",
+          "techno_descriptions": "The best tools for track app version",
+          "techno_image": "git.png"
+        },
+        {
+          "techno_name": "New techno 1",
+          "techno_descriptions": "The best new techno",
+          "techno_image": "techno.png"
+        },
+        {
+          "techno_name": "New techno 2",
+          "techno_descriptions": "The best new techno",
+          "techno_image": "techno.png"
+        },
+        {
+          "techno_name": "New techno 2",
+          "techno_descriptions": "The best new techno",
+          "techno_image": "techno.png"
+        }
+      ]
+    }
   },
-  "realizations": {
-    "title": "Realizations",
-    "sub_title": "Realize by me",
-    "descriptions": "The applications made by me",
-    "applications": [
-      {
-        "app_name": "Discovery of Africa",
-        "app_descriptions": "Quiz app with the african flag",
-        "app_image": "dofa.png",
-        "app_url": "www.dofa.com"
-      },
-      {
-        "app_name": "BXStages",
-        "app_descriptions": "Where you should found the best internship in bxl and arround",
-        "app_image": "bxs.png",
-        "app_url": "www.bxs.com"
-      },
-      {
-        "app_name": "Klimaat",
-        "app_descriptions": "Be aware of the weather",
-        "app_image": "klm.png",
-        "app_url": "www.klimaat.com"
-      }
-    ]
-  },
-  "skills": {
-    "title": "Skills",
-    "sub_title": "My best technos and tools",
-    "descriptions": "The list of skills",
-    "technologies": [
-      {
-        "techno_name": "ReactJS",
-        "techno_descriptions": "The best frontend framework",
-        "techno_image": "react.png"
-      },
-      {
-        "techno_name": "Laravel",
-        "techno_descriptions": "The best backend framework",
-        "techno_image": "laravel.png"
-      },
-      {
-        "techno_name": "Git",
-        "techno_descriptions": "The best tools for track app version",
-        "techno_image": "git.png"
-      }
-    ]
+  "pages": {
+    "contact": {
+      "title": "Contact me",
+      "sub_title": "Get in touch",
+      "descriptions": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+    }
   }
 }

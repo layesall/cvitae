@@ -11,32 +11,33 @@ import {
   FaCodepen,
 } from "react-icons/fa";
 import "./Footer.css";
+import { AppConfig } from "../../config/AppConfig";
 
 export default function Footer() {
   return (
     <footer className="footer-component">
       <div className="footer-top">
         <div className="ft-nav-group">
-          <Link to="/" className="ft-nav-link" title="Layesall">
+          <a href="/" className="ft-nav-link" title="Layesall">
             <FaUser className="ft-nav-icon" />
             <span className="ft-nav-text">Layesall</span>
-          </Link>
-          <Link to="#portfolio" className="ft-nav-link" title="Realisations">
+          </a>
+          <a href="#about" className="ft-nav-link" title="Layesall">
+            <FaUser className="ft-nav-icon" />
+            <span className="ft-nav-text">Skills</span>
+          </a>
+          <a href="#portfolio" className="ft-nav-link" title="Realisations">
             <FaCode className="ft-nav-icon" />
             <span className="ft-nav-text">Réalisations</span>
-          </Link>
-          <Link to="#skills" className="ft-nav-link" title="Competences">
-            <FaTools className="ft-nav-icon" />
-            <span className="ft-nav-text">Compétences</span>
-          </Link>
-          <Link to="#contact" className="ft-nav-link" title="Contact">
+          </a>
+          <a href="#contact" className="ft-nav-link" title="Contact">
             <FaEnvelope className="ft-nav-icon" />
             <span className="ft-nav-text">Contact</span>
-          </Link>
+          </a>
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="ft-copyright"> &copy; Layesall &middot; 2022 </div>
+        <div className="ft-copyright"> &copy; { AppConfig('app').app_copyright } </div>
         <div className="ft-social-group">
           <Link
             to="#"
