@@ -8,69 +8,81 @@
   "curriculum": {
     "realizations": {
       "title": "Réalisations",
-      "sub_title": "Realize by me",
-      "descriptions": "Made by myself",
       "projects": [
         {
-          "project_name": "Discovery of Africa",
-          "project_descriptions": "Quiz app with the african flag",
-          "project_image": "dofa.png",
-          "project_url": "www.dofa.com"
+          "name": "Discovery of Africa",
+          "descriptions": "Quiz app with the african flag",
+          "image": "defaultproject.png",
+          "link": "www.dofa.com"
         },
         {
-          "project_name": "BXStages",
-          "project_descriptions": "find the best internship in bxl and arround",
-          "project_image": "bxstages.png",
-          "project_url": "www.bxs.com"
+          "name": "BXStages",
+          "descriptions": "find the best internship in bxl and arround",
+          "image": "defaultproject.png",
+          "link": "www.bxs.com"
         },
         {
-          "project_name": "Klimaat",
-          "project_descriptions": "Be aware of the weather",
-          "project_image": "klimaat.png",
-          "project_url": "www.klimaat.com"
+          "name": "Klimaat",
+          "descriptions": "Be aware of the weather",
+          "image": "defaultproject.png",
+          "link": "www.klimaat.com"
         },
         {
-          "project_name": "Findcity",
-          "project_descriptions": "Search and get informations about city",
-          "project_image": "findcity.png",
-          "project_url": "www.findcity.com"
+          "name": "Findcity",
+          "descriptions": "Search and get informations about city",
+          "image": "defaultproject.png",
+          "link": "www.findcity.com"
         },
         {
-          "project_name": "Mathequal",
-          "project_descriptions": "Fast and simple Math calculator",
-          "project_image": "mathequal.png",
-          "project_url": "www.mathequal.com"
+          "name": "Mathequal",
+          "descriptions": "Fast and simple Math calculator",
+          "image": "defaultproject.png",
+          "link": "www.mathequal.com"
         }
       ]
     },
     "skills": {
-      "title": "Favorit",
-      "sub_title": "My best technos and tools",
-      "descriptions": "The list of skills",
+      "title": "Trousse à outils",
       "technologies": [
         {
-          "techno_name": "ReactJS",
-          "techno_descriptions": "The best frontend framework",
-          "techno_image": "react.png"
+          "name": "Laravel",
+          "image": "laravel.png"
         },
         {
-          "techno_name": "Laravel",
-          "techno_descriptions": "The best backend framework",
-          "techno_image": "laravel.png"
+          "name": "ExpressJS",
+          "image": "expressjs.png"
         },
         {
-          "techno_name": "Git",
-          "techno_descriptions": "The best tools for track app version",
-          "techno_image": "git.png"
+          "name": "MySQL",
+          "image": "mysql.png"
+        },
+        {
+          "name": "Composer",
+          "image": "composer.png"
+        },
+        {
+          "name": "ReactJS",
+          "image": "reactjs.png"
+        },
+        {
+          "name": "Bootstrap",
+          "image": "bootstrap.png"
+        },
+        {
+          "name": "Git",
+          "image": "git.png"
+        },
+        {
+          "name": "NPM",
+          "image": "npm.png"
         }
       ]
     }
   },
   "pages": {
     "contact": {
-      "title": "Contact me",
-      "sub_title": "Get in touch",
-      "descriptions": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
+      "title": "Contact",
+      "descriptions": "Hâte de vous lire très bientôt pour discuter de vos projets !"
     }
   }
 }

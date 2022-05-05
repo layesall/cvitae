@@ -18,21 +18,21 @@ export default function Realizations() {
           </Col>
         </Row>
         {AppConfig("realizations").projects.map((proj, pid) => (
-          <Row>
-            <Col md={8}>
-              <div className="project-card" key={pid}>
+          <Row key={pid}>
+            <Col md={8} >
+              <div className="project-card" >
                 <Image
-                  src={require("../../assets/pfolio/" + proj.project_image)}
-                  alt={"project: " + proj.project_name}
+                  src={require("../../assets/pfolio/" + proj.image)}
+                  alt={"project: " + proj.name}
                   className="project-card-image"
                 />
               </div>
             </Col>
             <Col md={4}>
               <div className="project-card" key={pid}>
-                <h3 className="project-card-title"> {proj.project_name} </h3>
-                <p className="project-card-text">{proj.project_descriptions}</p>
-                <p className="project-card-link"> {proj.project_url} </p>
+                <h3 className="project-card-title"> {proj.name} </h3>
+                <p className="project-card-text">{proj.descriptions}</p>
+                <p className="project-card-link"> {proj.link} </p>
               </div>
             </Col>
           </Row>

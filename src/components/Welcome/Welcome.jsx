@@ -1,18 +1,17 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import "./Welcome.css";
 
-import { AppConfig } from "../../config/AppConfig";
 import Footer from "../Footer/Footer";
 import About from "../About/About";
 import Realizations from "../Realizations/Realizations";
+import Skills from "../Skills/Skills";
 
 export default function Welcome() {
   return (
     <>
       <About />
       <Realizations />
-
+      <Skills />
       <Footer />
     </>
   );

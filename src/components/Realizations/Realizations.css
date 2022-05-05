@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-flow: column;
   background: var(--secondary);
   width: 100%;
   min-height: calc(100vh - 103px);
@@ -14,6 +15,7 @@
 
 .realizations-title {
   display: flex;
+  justify-content: center;
   align-items: center;
   color: var(--green);
   font-weight: bolder;
