@@ -21,7 +21,7 @@ export default function Realizations() {
         <Row>
           {AppConfig("realizations").projects.map((proj, pid) => (
             <Col md={4} key={pid}>
-              <div className="project-card">
+              <div className="project-card shadow">
                 <Image
                   src={require("../../assets/pfolio/" + proj.image)}
                   alt={"project: " + proj.name}
@@ -31,7 +31,14 @@ export default function Realizations() {
                 <div className="project-card-body" key={pid}>
                   <p className="project-card-text">{proj.descriptions}</p>
                 </div>
-                <Link to={proj.link} title={'Visiter ' +proj.name} className="project-card-link"> <FaExternalLinkAlt /> </Link>
+                <a
+                  href={proj.link}
+                  target="_blank"
+                  title={"Visiter " + proj.name}
+                  className="project-card-link"
+                >
+                  <FaExternalLinkAlt />
+                </a>
               </div>
             </Col>
           ))}

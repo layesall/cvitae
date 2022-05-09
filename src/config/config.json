@@ -3,7 +3,7 @@
     "app_name": "Layesall",
     "app_shortname": "Développeur passionné et déterminé pour devenir un forgeron du web.",
     "app_descriptions": "Bonjour moi c'est Sall, jeune développeur d'applications web spécialisé dans le développement Back-end ou si vous préférez, côté serveur et base de données. Actuellement basé à Bruxelles en Belgique.",
-    "app_copyright": "2022 | Layesall"
+    "app_copyright": "2022 Layesall"
   },
   "curriculum": {
     "realizations": {
@@ -11,31 +11,31 @@
       "projects": [
         {
           "name": "Discovery of Africa",
-          "descriptions": "Quiz app with the african flag",
+          "descriptions": "Explorer le continent Africain via un jeu de quiz !",
           "image": "dofa.png",
           "link": "https://discoveryofafrica.com"
         },
         {
           "name": "BXStages",
-          "descriptions": "find the best internship in bxl and arround",
+          "descriptions": "Rendre simple la réservation de stage des étudiants dans la Région de Bruxelles-Capitale.",
           "image": "bxstages.png",
           "link": "https://bxstages.layesall.com"
         },
         {
           "name": "Klimaat",
-          "descriptions": "Be aware of the weather",
+          "descriptions": "Simple et efficace pour consulter la méteo !",
           "image": "klimaat.png",
           "link": "https://layesall.github.io/klimaat/"
         },
         {
           "name": "Findcity",
-          "descriptions": "Search and get informations about city",
+          "descriptions": "Entrer le nom d'une ville de France et obtenez les informations concernant la ville.",
           "image": "findcity.png",
           "link": "https://layesall.github.io/findcity/"
         },
         {
           "name": "Mathequal",
-          "descriptions": "Fast and simple Math calculator",
+          "descriptions": "Une calculatrice, simple mais qui possède les fonctionnalités nécessaire.",
           "image": "mathequal.png",
           "link": "https://mathequal.layesall.com"
         }
