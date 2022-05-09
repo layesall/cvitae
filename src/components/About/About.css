@@ -50,30 +50,43 @@
   margin: .5rem 0;
 }
 
-.btn-curriculum {
+
+.btn-curriculum,
+.btn-contact
+{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  width: 120px;
+  padding: 5px;
+  font-size: small;
+}
+
+
+.btn-curriculum,
+.btn-curriculum:hover 
+{
   color: var(--secondary);
   background: var(--green);
-  text-decoration: none;
-  width: 150px;
-  padding: 10px;
 }
 
-.btn-curriculum:hover {
-  color: inherit;
-  opacity: .8;
-  transition: all .2s ease-in-out;
-}
-
-.btn-curriculum:nth-child(2){
+.btn-contact,
+.btn-contact:hover
+{
   color: var(--green);
   background: var(--secondary);
 }
 
+.btn-curriculum:hover,
+.btn-contact:hover
+{
+  opacity: .8;
+  transition: all .2s ease-in-out;
+}
+
 .cv-icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .cv-text {

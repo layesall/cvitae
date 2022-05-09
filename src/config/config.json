@@ -12,32 +12,32 @@
         {
           "name": "Discovery of Africa",
           "descriptions": "Quiz app with the african flag",
-          "image": "defaultproject.png",
-          "link": "www.dofa.com"
+          "image": "dofa.png",
+          "link": "https://discoveryofafrica.com"
         },
         {
           "name": "BXStages",
           "descriptions": "find the best internship in bxl and arround",
-          "image": "defaultproject.png",
-          "link": "www.bxs.com"
+          "image": "bxstages.png",
+          "link": "https://bxstages.layesall.com"
         },
         {
           "name": "Klimaat",
           "descriptions": "Be aware of the weather",
-          "image": "defaultproject.png",
-          "link": "www.klimaat.com"
+          "image": "klimaat.png",
+          "link": "https://layesall.github.io/klimaat/"
         },
         {
           "name": "Findcity",
           "descriptions": "Search and get informations about city",
-          "image": "defaultproject.png",
-          "link": "www.findcity.com"
+          "image": "findcity.png",
+          "link": "https://layesall.github.io/findcity/"
         },
         {
           "name": "Mathequal",
           "descriptions": "Fast and simple Math calculator",
-          "image": "defaultproject.png",
-          "link": "www.mathequal.com"
+          "image": "mathequal.png",
+          "link": "https://mathequal.layesall.com"
         }
       ]
     },

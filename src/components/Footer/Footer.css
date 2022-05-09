@@ -14,6 +14,7 @@
   margin-top: 3rem;
   color: var(--secondary);
   background: var(--primary);
+  z-index: 100;
 }
 
 .footer-top {

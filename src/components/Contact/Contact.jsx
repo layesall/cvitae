@@ -23,7 +23,7 @@ export default function Contact() {
       </Container>
       <Container>
         <Row className="form-row">
-          <Col md={6}> <div className="msg-alert">Alert</div> </Col>
+          <Col md={6}> <div className="msg-alert"></div> </Col>
         </Row>
         <Row className="form-row">
           <Col md={6}>
