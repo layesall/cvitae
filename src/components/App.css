@@ -4,3 +4,15 @@
   min-height: 100vh;
   background: var(--secondary);
 }
+
+.app-section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--green);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}

@@ -14,7 +14,7 @@ export default function Contact() {
       <Container>
         <Row>
           <Col>
-            <h1 className="contact-title">
+            <h1 className="app-section-title">
               <FaEnvelope /> {contact.title}
             </h1>
             <h4 className="contact-intro">{contact.descriptions}</h4>

@@ -11,7 +11,7 @@ export default function Realizations() {
       <Container>
         <Row>
           <Col>
-            <h1 className="realizations-title"> 
+            <h1 className="app-section-title"> 
             <FaThLarge />
             {AppConfig("realizations").title} 
             </h1>

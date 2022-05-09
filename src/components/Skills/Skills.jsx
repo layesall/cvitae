@@ -13,7 +13,7 @@ export default function Skills() {
       <Container>
         <Row>
           <Col>
-            <h1 className="skills-title">
+            <h1 className="app-section-title">
               <FaTools /> {skills.title}
             </h1>
           </Col>
