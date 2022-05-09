@@ -19,7 +19,7 @@
 .footer-top {
   color: inherit;
   width: 100%;
-  border-bottom: 3px solid var(--green);
+  border-bottom: 1px solid var(--green);
 }
 
 .ft-nav-group{
@@ -33,11 +33,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: .5rem;
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
-  
+  font-size: small;
 }
 
 .ft-nav-link:hover{
@@ -47,7 +47,7 @@
 }
 
 .ft-nav-icon {
-  display: none;
+  margin-right: 5px;
 }
 
 .footer-bottom {
@@ -55,7 +55,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: .5rem;
+  padding: .3rem;
 }
 
 .ft-copyright {
@@ -64,6 +64,7 @@
   align-items: center;
   text-transform: uppercase;
   width: 100%;
+  font-size: smaller;
 }
 
 .ft-social-group {
@@ -79,7 +80,7 @@
   align-items: center;
   color: inherit;
   margin: 5px;
-  font-size: large;
+  font-size: smaller;
 }
 
 .ft-social-link:hover {
@@ -90,7 +91,6 @@
 @media screen and (max-width: 420px) {
 
   .ft-nav-icon {
-    display: block;
     font-size: large;
   }
 
