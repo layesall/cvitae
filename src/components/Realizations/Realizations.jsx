@@ -4,7 +4,6 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import "./Realizations.css";
 
 import { AppConfig } from "../../config/AppConfig";
-import { Link } from "react-router-dom";
 
 export default function Realizations() {
   return (
@@ -33,7 +32,6 @@ export default function Realizations() {
                 </div>
                 <a
                   href={proj.link}
-                  target="_blank"
                   title={"Visiter " + proj.name}
                   className="project-card-link"
                 >
