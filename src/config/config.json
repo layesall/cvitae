@@ -38,6 +38,12 @@
           "descriptions": "Une calculatrice, simple mais qui possède les fonctionnalités nécessaire.",
           "image": "mathequal.png",
           "link": "https://mathequal.layesall.com"
+        },
+        {
+          "name": "Lifeshoot Moments",
+          "descriptions": "Logo offielle de Lifeshoot Moments, photographe & videographe.",
+          "image": "logo-lifeshootm.svg",
+          "link": "https://lifeshootmoments.com"
         }
       ]
     },
