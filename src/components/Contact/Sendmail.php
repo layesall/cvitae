@@ -18,14 +18,6 @@ function Sendmail() {
     
     $mailData = json_decode( file_get_contents('php://input') );
 
-    echo("Sendmail Enabled <br/><br/><br/>");
-
-    json_encode($mailData);
-
-    var_dump($mailData); die;
-
-    $isSend = [];
-
     if( isset($mailData) && !empty($mailData) || $mailData !== null  ){
 
         ini_set('SMTP', 'send.one.com');
@@ -42,22 +34,15 @@ function Sendmail() {
 
         try{
             if( mail($to, $subject, $message, $headers) ){ 
-
                 http_response_code(200);
-                $mailData->isSend  = true;
             }
 
         }catch(\Throwable $err){
             http_response_code(404);
-            $mailData->isSend  = false;
-            echo $err;
+            return $err;
 
         }
     }
-
-    array_push($isSend, ["isSend" => true]);
-
-    echo json_encode( $isSend );
 
 }
 
