@@ -1,6 +1,6 @@
 /**
  * Using for filter mail data
- * 
+ *
  */
 export class Sendmail {
   constructor(forms, url, alert) {
@@ -38,16 +38,12 @@ export class Sendmail {
     });
 
     if (this.errors === "" || this.errors === null) {
-      this.sending(
-        this.url,
-        {
-          name: this.dataSend[0],
-          email: this.dataSend[1],
-          subject: this.dataSend[2],
-          body: this.dataSend[3],
-        },
-        true
-      );
+      this.sending(this.url, {
+        name: this.dataSend[0],
+        email: this.dataSend[1],
+        subject: this.dataSend[2],
+        body: this.dataSend[3],
+      });
 
       setTimeout(() => {
         this.alert.textContent = "Merci pour votre message, à très bientôt !";
