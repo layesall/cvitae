@@ -7,8 +7,7 @@
     Date        : 05-05-2022
 */
 
-function Sendmail()
-{
+function sendmail() {
 
     /**
      * Header accessibility
@@ -16,10 +15,12 @@ function Sendmail()
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Headers: *');
     header('Access-Control-Allow-Method: GET, POST');
+    
+    $mailData = json_decode( file_get_contents('php://input') );
 
-    $mailData = json_decode(file_get_contents('php://input'));
+    $isSend = [];
 
-    if (isset($mailData) && !empty($mailData) || $mailData !== null) {
+    if( isset($mailData) && !empty($mailData) || $mailData !== null  ){
 
         ini_set('SMTP', 'send.one.com');
         ini_set('smtp_port', 465);
@@ -29,17 +30,29 @@ function Sendmail()
         $subject    = strip_tags($mailData->subject);
         $message    = wordwrap(strip_tags($mailData->body), 70, "\r\n");
         $headers    =   "From           : $from_name | $from_email \r\n" .
-            "Reply-To       : $from_email \r\n" .
-            "X-Mailer       : PHP/" . phpversion() . "\r\n" .
-            "Content-Type   : text/html; application/json; charset=UTF-8";
-        try {
-            http_response_code(200);
-            return mail($to, $subject, $message, $headers);
-        } catch (\Throwable $err) {
+                        "Reply-To       : $from_email \r\n" .
+                        "X-Mailer       : PHP/" . phpversion() . "\r\n" . 
+                        "Content-Type   : text/html; application/json; charset=UTF-8";
+
+        try{
+            if( mail($to, $subject, $message, $headers) ){ 
+
+                http_response_code(200);
+                $mailData->isSend  = true;
+            }
+
+        }catch(\Throwable $err){
             http_response_code(404);
-            return $err;
+            $mailData->isSend  = false;
+            echo $err;
+
         }
     }
+
+    array_push($isSend, ["isSend" => true]);
+
+    json_encode( $isSend );
+
 }
 
-Sendmail();
+sendmail();

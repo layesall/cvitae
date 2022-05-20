@@ -3,14 +3,14 @@
  *
  */
 export class Sendmail {
-  constructor(forms, url, alert) {
+  constructor(forms, alert) {
     this.forms = forms;
-    this.url = url;
     this.alert = alert;
     this.email = "";
     this.formData = [];
     this.errors = "";
     this.dataSend = [];
+    this.isSend = false;
 
     this.getFormData();
     this.filterFormData();
@@ -38,11 +38,12 @@ export class Sendmail {
     });
 
     if (this.errors === "" || this.errors === null) {
-      this.sending(this.url, {
+      this.sending({
         name: this.dataSend[0],
         email: this.dataSend[1],
         subject: this.dataSend[2],
         body: this.dataSend[3],
+        isSend: this.isSend
       });
 
       setTimeout(() => {
@@ -71,7 +72,8 @@ export class Sendmail {
     }
   }
 
-  sending(url, body, log = false) {
+  sending(body, log = false) {
+    let url = "./Sendmail.php";
     let reqOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -13,9 +13,8 @@ export default function Contact() {
     e.preventDefault();
     const forms = document.querySelector("#contact-form");
     const alert = document.querySelector(".msg-alert");
-    const url = "./Sendmail.php";
     forms.autocomplete = "off";
-    return new Sendmail(forms, url, alert);
+    return new Sendmail(forms, alert);
     
   };
 
