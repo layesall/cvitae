@@ -28,7 +28,7 @@ function Sendmail()
         $from_email = strip_tags($mailData->email);
         $subject    = strip_tags($mailData->subject);
         $message    = wordwrap(strip_tags($mailData->body), 70, "\r\n");
-        $headers    =   "From           : $from_email \r\n" .
+        $headers    =   "From           : $from_name | $from_email \r\n" .
             "Reply-To       : $from_email \r\n" .
             "X-Mailer       : PHP/" . phpversion() . "\r\n" .
             "Content-Type   : text/html; application/json; charset=UTF-8";
