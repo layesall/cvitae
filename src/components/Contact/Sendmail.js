@@ -44,7 +44,7 @@ export class Sendmail {
         subject: this.dataSend[2],
         body: this.dataSend[3],
         isSend: this.isSend
-      });
+      }, true);
 
       setTimeout(() => {
         this.alert.textContent = "Merci pour votre message, à très bientôt !";
@@ -73,11 +73,11 @@ export class Sendmail {
   }
 
   sending(body, log = false) {
-    let url = "./Sendmail.php";
+    let url = "/access";
     let reqOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      body: JSON.stringify(body)
     };
 
     fetch(url, reqOptions).then(async (response) => {
