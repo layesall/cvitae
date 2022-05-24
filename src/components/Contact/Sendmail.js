@@ -38,25 +38,29 @@ export class Sendmail {
     });
 
     if (this.errors === "" || this.errors === null) {
-      this.sending({
-        name: this.dataSend[0],
-        email: this.dataSend[1],
-        subject: this.dataSend[2],
-        body: this.dataSend[3],
-        isSend: this.isSend
-      }, true);
+      let send = this.sending(
+        {
+          name: this.dataSend[0],
+          email: this.dataSend[1],
+          subject: this.dataSend[2],
+          message: this.dataSend[3],
+        },
+        true
+      );
 
-      setTimeout(() => {
-        this.alert.textContent = "Merci pour votre message, à très bientôt !";
-        this.alert.classList.remove("noSend");
-        this.alert.classList.add("isSend");
-        this.forms.reset();
-
+      if (send) {
         setTimeout(() => {
-          this.alert.textContent = "";
-          this.alert.classList.remove("isSend");
-        }, 3000);
-      }, 2000);
+          this.alert.textContent = "Merci pour votre message, à très bientôt !";
+          this.alert.classList.remove("noSend");
+          this.alert.classList.add("isSend");
+          this.forms.reset();
+
+          setTimeout(() => {
+            this.alert.textContent = "";
+            this.alert.classList.remove("isSend");
+          }, 3000);
+        }, 2000);
+      }
     } else {
       this.alert.textContent = this.errors;
       this.alert.classList.remove("isSend");
@@ -73,11 +77,11 @@ export class Sendmail {
   }
 
   sending(body, log = false) {
-    let url = "/access";
+    let url = "http://localhost:4000/access";
     let reqOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
     };
 
     fetch(url, reqOptions).then(async (response) => {

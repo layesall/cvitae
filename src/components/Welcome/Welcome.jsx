@@ -15,7 +15,7 @@ export default function Welcome() {
       <About />
       <Realizations />
       <Skills />
-      <Contact />v
+      <Contact />
       <Footer />
     </>
   );

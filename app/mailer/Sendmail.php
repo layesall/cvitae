@@ -20,6 +20,8 @@ function sendmail() {
 
     $isSend = [];
 
+    var_dump($mailData);
+
     if( isset($mailData) && !empty($mailData) || $mailData !== null  ){
 
         ini_set('SMTP', 'send.one.com');

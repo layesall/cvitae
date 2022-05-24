@@ -1,57 +1,52 @@
 "use strict";
 const express = require("express");
 const nodemailer = require("nodemailer");
-const app = express();
-const router = express.Router()
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
-const localHost = 'http://localHost:'
-const localPort = 8080
-const endPoint = '/access'
-const toUser = 'contact@layesall.com'
-const toPass = '@mylayesall21%'
+const app = express();
+
+const localHost = "http://localHost:";
+const localPort = 4000;
+const endPoint = "/access";
+
+const toHost = "smtp.ethereal.email" //send.one.com 
+const toPort = 587 // 465
+const toUser = "tillman.gulgowski55@ethereal.email" //contact@layesall.com;
+const toPass = "FvqckPN2WnPD7Fefrj"; //@mylayesall21%
+
+app.use(cors({ origin: "*" }));
+app.use(bodyParser.json());
 
 // send mail with defined transport object
-app.post(`${endPoint}`, (req, res) => {
-
+app.post(`${endPoint}`, async (req, res) => {
   res.send("Hallo test email");
 
-  async function main() {
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: toHost,
+    port: toPort,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: toUser,
+      pass: toPass,
+    },
+  });
 
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      host: "send.one.com'",
-      port: 465,
-      secure: true, // true for 465, false for other ports
-      auth: {
-        user: toUser,
-        pass: toPass,
-      },
-    });
-
-    let from_name = req.body.name;
-    let from_email = req.body.email;
-    let from_subject = req.body.subject;
-    let from_message = req.body.message;
-
+  try {
     let info = await transporter.sendMail({
-      from: `${from_name} <${from_email}>`,
+      from: `${req.body.name} <${req.body.email}>`,
       to: toUser,
-      subject: `${from_subject}`,
-      text: `${from_message}`,
-      html: `${from_message}`,
+      subject: `${req.body.email}`,
+      text: `${req.body.message}`,
     });
 
     console.log(info);
-
-    console.log("Message sent: %s", info.messageId);
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  } catch (error) {
+    console.error(error);
   }
-
-  main().catch(console.error);
-
 });
-
 
 app.listen(localPort, () => {
   console.log(`Server running at ${localHost}${localPort}${endPoint}`);
-})
+});
