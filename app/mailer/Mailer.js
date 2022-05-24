@@ -8,10 +8,10 @@ const localHost = 'http://localHost:'
 const localPort = 8080
 const endPoint = '/access'
 const toUser = 'contact@layesall.com'
-// const toPass = 'qmKnXpsMmPHvvxJ9VR'
+const toPass = '@mylayesall21%'
 
 // send mail with defined transport object
-router.post(`${endPoint}`, (req, res) => {
+app.post(`${endPoint}`, (req, res) => {
 
   res.send("Hallo test email");
 
@@ -24,7 +24,7 @@ router.post(`${endPoint}`, (req, res) => {
       secure: true, // true for 465, false for other ports
       auth: {
         user: toUser,
-        // pass: toPass,
+        pass: toPass,
       },
     });
 
@@ -41,6 +41,8 @@ router.post(`${endPoint}`, (req, res) => {
       html: `${from_message}`,
     });
 
+    console.log(info);
+
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
   }
@@ -48,6 +50,7 @@ router.post(`${endPoint}`, (req, res) => {
   main().catch(console.error);
 
 });
+
 
 app.listen(localPort, () => {
   console.log(`Server running at ${localHost}${localPort}${endPoint}`);
