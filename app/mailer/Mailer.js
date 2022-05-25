@@ -1,32 +1,36 @@
 "use strict";
 const express = require("express");
-const nodemailer = require("nodemailer");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const path = require('path')
+const nodemailer = require("nodemailer");
+const dotenv = require('dotenv')
+
+dotenv.config({
+  path: path.resolve(__dirname, '../../.env')
+})
+
+const ENV = process.env
 
 const app = express();
 
-const localHost = "http://localHost:";
-const localPort = 4000;
-const endPoint = "/access";
+const localurl = `http://${ENV.APP_HOST}:${ENV.APP_PORT}/`
+const endPoint = "access";
 
-const toHost = "smtp.ethereal.email" //send.one.com 
-const toPort = 587 // 465
-const toUser = "tillman.gulgowski55@ethereal.email" //contact@layesall.com;
-const toPass = "FvqckPN2WnPD7Fefrj"; //@mylayesall21%
+const toHost = ENV.MAIL_HOST
+const toPort = ENV.MAIL_PORT
+const toSecure = ENV.MAIL_SECURE
+const toUser = ENV.MAIL_USER
+const toPass = ENV.MAIL_PASS
 
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
-// send mail with defined transport object
 app.post(`${endPoint}`, async (req, res) => {
-  res.send("Hallo test email");
-
-  // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: toHost,
     port: toPort,
-    secure: true, // true for 465, false for other ports
+    secure: toSecure, 
     auth: {
       user: toUser,
       pass: toPass,
@@ -47,6 +51,6 @@ app.post(`${endPoint}`, async (req, res) => {
   }
 });
 
-app.listen(localPort, () => {
-  console.log(`Server running at ${localHost}${localPort}${endPoint}`);
+app.listen(ENV.APP_PORT || 4000, () => {
+  console.log(`Server running at ${localurl}${endPoint}`);
 });
