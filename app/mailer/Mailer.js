@@ -15,7 +15,7 @@ const ENV = process.env
 const app = express();
 
 const localurl = `http://${ENV.APP_HOST}:${ENV.APP_PORT}/`
-const endPoint = "access";
+const endPoint = "sendmail";
 
 const toHost = ENV.MAIL_HOST
 const toPort = ENV.MAIL_PORT
@@ -27,6 +27,9 @@ app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
 app.post(`${endPoint}`, async (req, res) => {
+
+  res.send("Hallo")
+
   let transporter = nodemailer.createTransport({
     host: toHost,
     port: toPort,
@@ -38,14 +41,13 @@ app.post(`${endPoint}`, async (req, res) => {
   });
 
   try {
-    let info = await transporter.sendMail({
+    await transporter.sendMail({
       from: `${req.body.name} <${req.body.email}>`,
       to: toUser,
       subject: `${req.body.email}`,
       text: `${req.body.message}`,
     });
 
-    console.log(info);
   } catch (error) {
     console.error(error);
   }

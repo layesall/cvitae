@@ -38,11 +38,12 @@ export class Sendmail {
     });
 
     if (this.errors === "" || this.errors === null) {
+      const [name, email, subject, message] = this.dataSend;
       this.sending({
-        name: this.dataSend[0],
-        email: this.dataSend[1],
-        subject: this.dataSend[2],
-        message: this.dataSend[3],
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
       });
 
       setTimeout(() => {
@@ -72,7 +73,7 @@ export class Sendmail {
   }
 
   sending(body, log = false) {
-    let url = "access";
+    let url = "sendmail";
     let reqOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
