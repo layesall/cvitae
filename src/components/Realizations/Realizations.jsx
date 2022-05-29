@@ -6,6 +6,8 @@ import "./Realizations.css";
 import { AppConfig } from "../../config/AppConfig";
 
 export default function Realizations() {
+  const projects = Object.values(AppConfig("realizations").projects).reverse();
+
   return (
     <div id="realizations" className="realizations-component">
       <Container>
@@ -18,7 +20,7 @@ export default function Realizations() {
           </Col>
         </Row>
         <Row>
-          {AppConfig("realizations").projects.map((proj, pid) => (
+          {projects.map((proj, pid) => (
             <Col md={4} key={pid}>
               <div className="project-card shadow">
                 <Image
