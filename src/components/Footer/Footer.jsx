@@ -8,6 +8,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaCodepen,
+  FaTools
 } from "react-icons/fa";
 import "./Footer.css";
 import { AppConfig } from "../../config/AppConfig";
@@ -25,9 +26,9 @@ export default function Footer() {
             <FaThLarge className="ft-nav-icon" />
             <span className="ft-nav-text">Réalisations</span>
           </a>
-          <a href="#contact" className="ft-nav-link" title="Contact">
-            <FaEnvelope className="ft-nav-icon" />
-            <span className="ft-nav-text">Contact</span>
+          <a href="#skills" className="ft-nav-link" title="Contact">
+            <FaTools className="ft-nav-icon" />
+            <span className="ft-nav-text">Compétences</span>
           </a>
         </div>
       </div>

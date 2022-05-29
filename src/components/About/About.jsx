@@ -20,7 +20,7 @@ export default function About() {
           <FaFileExport className="cv-icon" />
           <span className="cv-text">Curriculum</span>
         </a>
-        <a href="#contact" title="Me contacter" className="btn-contact">
+        <a href="mailto:contact@layesall.com" title="Me contacter" className="btn-contact">
           <FaEnvelope className="cv-icon" />
           <span className="cv-text">Contact</span>
         </a>

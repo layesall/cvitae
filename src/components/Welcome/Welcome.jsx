@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 import About from "../About/About";
 import Realizations from "../Realizations/Realizations";
 import Skills from "../Skills/Skills";
-import Contact from "../Contact/Contact";
+// import Contact from "../Contact/Contact";
 import Loader from "../Loader/Loader";
 
 export default function Welcome() {
@@ -15,7 +15,7 @@ export default function Welcome() {
       <About />
       <Realizations />
       <Skills />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </>
   );
