@@ -28,12 +28,6 @@
           "link": "https://layesall.github.io/klimaat/"
         },
         {
-          "name": "Findcity",
-          "descriptions": "Entrer le nom d'une ville de France et obtenez les informations concernant la ville.",
-          "image": "findcity.png",
-          "link": "https://layesall.github.io/findcity/"
-        },
-        {
           "name": "Mathequal",
           "descriptions": "Une calculatrice, simple mais qui possède les fonctionnalités nécessaire.",
           "image": "mathequal.png",
@@ -44,6 +38,12 @@
           "descriptions": "Logo officiel de Lifeshoot Moments, photographe & videographe.",
           "image": "logo-lifeshootm.svg",
           "link": "https://lifeshootmoments.com"
+        },
+        {
+          "name": "Africanblog",
+          "descriptions": "Les dernières actualités politiques, cultures, tendances du continent sont ici...",
+          "image": "afblog.png",
+          "link": "https://africanblog.layesall.com/"
         }
       ]
     },
