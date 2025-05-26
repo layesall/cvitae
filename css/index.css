@@ -23,7 +23,6 @@ h1{
 
 h2{
   color: var(--title-color);
-  font-weight: lighter;
   letter-spacing: 3px;
   margin-bottom: 1.5rem;
 }
@@ -71,7 +70,6 @@ a{
 
 .ls-banner p{
   font-size: 1.3rem;
-  font-weight: lighter;
   line-height: 1.8;
 }
 
