@@ -1,38 +1,528 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./img/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Curriculum vitae de Layesall, jeune développeur d'application web" />
-    <meta name="keywords" content="Curriculum vitae, Layesall, Développeur web à Bruxelles, Création de site web, Conception d'application web, Développeur PHP & MySQL, Développeur HTML5 & CSS3, Développeur JavaScript" />
-    <meta name="author" content="Layesall" />
-    <title>Layesall, développeur d'application web</title>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Premium -->
+    <title>Layesall | Développeur Full Stack qui transforme vos idées en réalité</title>
+    <meta name="description" content="Expert Python React Django à Bruxelles. Je crée des applications web et mobiles performantes qui font la différence. Disponible pour vos projets.">
+    <meta name="keywords" content="développeur full stack, python, react, django, bruxelles, freelance, applications web, mobile, performance">
+    
+    <!-- Open Graph Premium -->
+    <meta property="og:title" content="Layesall - Votre développeur Full Stack à Bruxelles">
+    <meta property="og:description" content="Transformons vos idées en applications performantes">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://layesall.com">
+    <meta property="og:image" content="https://layesall.com/img/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css">
+    
+    <!-- Fonts Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <script src="./js/index.js" type="module" defer></script>
-  </head>
-  <body>
-    <div class="ls-main">
-        <div class="ls-banner">
-          <div class="ls-profile">
-              <a href="/"><img src="./img/meprofile.png" alt="profile"></a>
-          </div>
-          <h1>Hi, I'm Layesall</h1>
-          <h2> Software Developer </h2>
-          <p> Welcome to my personal boring place. </p>
-          <p> I'm a software developer from Guinea. I currently live in Brussels, Belgium.</p><br>
-          <p> I'm currently focused on developing 
-            <a href="https://github.com/layesall/cirecss" class="ls-cirecss">[cirecss]</a>,
-            a CSS tool that makes HTML elements responsive and very elegant. </p><br>
-          <p class="ls-cta"> 
-            You can contact me at 
-            <a href="mailto:info.layesall@gmail.com" class="ls-contactme">
-              <img src="./img/mail.png" alt="mail-icon">
-            </a> 
-          </p>
-      </div>
-    </div>
-    <footer class="ls-footer">&copy; Layesall &middot; All rights reserved.</footer>
-  </body>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <span class="brand-icon">&lt;/&gt;</span>
+                    <span class="brand-name">Layesall</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#projects" class="nav-link">Projets</a>
+                <a href="#skills" class="nav-link">Expertise</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-dots"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Disponible pour projets
+                </div>
+                
+                <div class="profile-image">
+                    <img src="./img/meprofile.png" alt="Layesall - Développeur Full Stack">
+                    <div class="profile-glow"></div>
+                </div>
+                
+                <h1 class="hero-title">
+                    Bonjour, je suis <span class="highlight">Layesall</span>
+                </h1>
+                
+                <h2 class="hero-subtitle">
+                    Je transforme vos <span class="text-gradient">idées</span> en <span class="text-gradient">applications</span> performantes
+                </h2>
+                
+                <p class="hero-description">
+                    Développeur Full Stack basé à Bruxelles, spécialisé dans la création 
+                    d'applications web et mobiles qui font la différence. 
+                    <strong>Python • React • Django • React Native</strong>
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Années d'expérience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projets livrés</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction client</span>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Démarrer un projet</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>Voir mes réalisations</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <span>Faire défiler</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14m-7-7l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projets qui parlent d'eux-mêmes</h2>
+                <p class="section-subtitle">
+                    Découvrez mes réalisations les plus récentes, disponibles sur GitHub
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- CVitae Portfolio -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-placeholder portfolio-preview">
+                            <div class="portfolio-mockup">
+                                <div class="mockup-header"></div>
+                                <div class="mockup-content">
+                                    <div class="mockup-line"></div>
+                                    <div class="mockup-line short"></div>
+                                    <div class="mockup-line medium"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>CVitae - Portfolio Professionnel</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/layesall/cvitae" target="_blank" class="project-link" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://layesall.com" class="project-link" aria-label="Live Demo">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Portfolio moderne qui met en valeur mes compétences avec un design épuré et des animations fluides. 
+                            Conçu pour impressionner les recruteurs et clients.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        
+                        <div class="github-badges">
+                            <img src="https://img.shields.io/github/stars/layesall/cvitae?style=flat-square&color=22c55e&logo=github" alt="Stars">
+                            <img src="https://img.shields.io/github/forks/layesall/cvitae?style=flat-square&color=22c55e&logo=github" alt="Forks">
+                            <img src="https://img.shields.io/github/last-commit/layesall/cvitae?style=flat-square&color=22c55e&logo=github" alt="Last Commit">
+                        </div>
+                        
+                        <div class="project-footer">
+                            <span class="status-badge status-completed">Portfolio Actif</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event Platform -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder event-preview">
+                            <div class="event-icons">
+                                <div class="event-icon">📅</div>
+                                <div class="event-icon">🎭</div>
+                                <div class="event-icon">🎪</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Event Platform</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Plateforme complète de gestion d'événements avec création, réservation, 
+                            paiement et gestion des participants. Solution scalable et moderne.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        
+                        <div class="github-badges">
+                            <img src="https://img.shields.io/github/stars/layesall/event-platform?style=flat-square&color=22c55e&logo=github" alt="Stars">
+                            <img src="https://img.shields.io/github/languages/count/layesall/event-platform?style=flat-square&color=22c55e&logo=github" alt="Languages">
+                            <img src="https://img.shields.io/github/languages/top/layesall/event-platform?style=flat-square&color=22c55e&logo=github" alt="Top Language">
+                        </div>
+                        
+                        <div class="project-footer">
+                            <span class="status-badge status-in-progress">En Développement</span>
+                            <span class="project-date">2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CireCSS -->
+                <article class="project-card project-archived">
+                    <div class="project-image">
+                        <div class="project-placeholder css-preview">
+                            <div class="css-code">
+                                <div class="code-line">.responsive {</div>
+                                <div class="code-line indent">flex: 1;</div>
+                                <div class="code-line indent">padding: 1rem;</div>
+                                <div class="code-line">}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>CireCSS</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/layesall/cirecss" target="_blank" class="project-link" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="project-description">
+                            Framework CSS léger pour créer des interfaces responsive rapidement. 
+                            Projet d'apprentissage - non maintenu activement mais toujours fonctionnel.
+                        </p>
+                        
+                        <div class="project-tech">
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        
+                        <div class="github-badges">
+                            <img src="https://img.shields.io/github/stars/layesall/cirecss?style=flat-square&color=gray&logo=github" alt="Stars">
+                            <img src="https://img.shields.io/github/last-commit/layesall/cirecss?style=flat-square&color=gray&logo=github" alt="Last Commit">
+                            <img src="https://img.shields.io/badge/status-archived-gray?style=flat-square" alt="Status">
+                        </div>
+                        
+                        <div class="project-footer">
+                            <span class="status-badge status-archived">Archivé</span>
+                            <span class="project-date">2023</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="projects-cta">
+                <p>Intéressé par mon travail ?</p>
+                <a href="#contact" class="btn btn-primary">Discutons de votre projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mon expertise technique</h2>
+                <p class="section-subtitle">
+                    Des technologies modernes pour des solutions performantes
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Django</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">TypeScript</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS3</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Mobile & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">React Native</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Prêt à démarrer ?</h2>
+                <p class="section-subtitle">
+                    Transformons votre idée en réalité ensemble
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <p>
+                        Que vous ayez un projet concret ou juste une idée, je suis là pour vous aider à la concrétiser. 
+                        Discutons-en et voyons comment je peux contribuer à votre succès.
+                    </p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-method">
+                        <div class="contact-icon-wrapper">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Email</h4>
+                            <a href="mailto:ulayesall@gmail.com">ulayesall@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon-wrapper">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/layesall" target="_blank">@layesall</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon-wrapper">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Localisation</h4>
+                            <span>Bruxelles, Belgique</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <a href="mailto:ulayesall@gmail.com" class="btn btn-primary btn-large">
+                        <span>Commencer la discussion</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-icon">&lt;/&gt;</span>
+                    <span class="brand-name">Layesall</span>
+                </div>
+                <p class="footer-tagline">Développeur Full Stack passionné</p>
+                <p class="footer-contact">
+                    <a href="mailto:ulayesall@gmail.com">ulayesall@gmail.com</a> • 
+                    <a href="https://github.com/layesall" target="_blank">GitHub</a> • 
+                    Bruxelles, BE
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2024 Layesall. Construit avec passion et détermination.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>
