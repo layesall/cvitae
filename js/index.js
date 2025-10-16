@@ -231,3 +231,16 @@ window.addEventListener('resize', () => {
         }
     }, 250);
 });
+
+
+// Tracker les clics sur contact
+gtag('event', 'contact_click', {
+    'event_category': 'engagement',
+    'event_label': 'contact_button'
+});
+
+// Tracker les clics sur projets
+gtag('event', 'project_click', {
+    'event_category': 'engagement', 
+    'event_label': 'github_link'
+});
