@@ -1,109 +1,125 @@
-# 🚀 Layesall - Portfolio
+# 🚀 Layesall — Produits web, SaaS & Shopify
 
-> Transforming ideas into powerful digital experiences
+> Je conçois et développe des produits web simples, rapides et utiles — de l’idée au produit en ligne.
 
-Welcome to my digital space where creativity meets code. This portfolio showcases my journey as a **Full Stack Developer**, featuring projects that solve real-world problems with elegant solutions.
-
----
-
-## ✨ About
-
-I'm **Layesall**, a passionate Full Stack Developer based in **Brussels, Belgium**. I specialize in building performant **web and mobile applications** that make a difference.
-
-### 🧠 Core Technologies
-
-* **Backend:** Python, Django, Node.js, Express, PostgreSQL
-* **Frontend:** React, TypeScript, JavaScript, HTML5, CSS3
-* **Mobile:** React Native
-* **DevOps:** Git, Docker
+Bienvenue dans mon espace digital.  
+Ce portfolio présente mes projets et mon approche : **transformer des idées en produits web concrets**, orientés business et utilisateurs.
 
 ---
 
-## 🎯 Featured Projects
+## ✨ À propos
 
-### 📄 CVitae - Professional Portfolio
+Je suis **Layesall**, développeur basé à **Bruxelles**.
 
-Modern, responsive portfolio showcasing skills with clean design and smooth animations.
-**Tech Stack:** HTML5, CSS3, JavaScript
-**Status:** ✅ Active
-[Live Demo](#) | [GitHub](#)
+J’aide les entrepreneurs, indépendants et PME à créer :
+- des **SaaS**
+- des **boutiques Shopify**
+- des **applications web sur mesure**
+- et parfois à **optimiser l’existant sans forcément coder (audit & consulting)**
 
----
-
-### 🎭 Event Platform
-
-Complete event management platform with creation, booking, payment, and participant management.
-**Tech Stack:** React, Node.js, Express, MongoDB
-**Status:** 🚧 In Development
-[GitHub](#)
+Mon objectif : construire des produits utiles, simples et évolutifs.
 
 ---
 
-### 🎨 CireCSS
+## 🧠 Ce que je fais
 
-Lightweight CSS framework for creating responsive interfaces quickly.
-**Tech Stack:** CSS, Responsive Design
-**Status:** 📦 Archived
-[GitHub](#)
+### 💻 Produits web & SaaS
+Création de plateformes, dashboards et outils métier sur mesure.
 
----
+### 🛒 Shopify & e-commerce
+Développement et optimisation de boutiques Shopify + amélioration des conversions.
 
-## 🎨 Design Philosophy
+### ⚙️ Backend & APIs
+Architecture solide, APIs, bases de données, intégrations de services.
 
-This portfolio features a **premium green/black/white** color scheme with:
-
-* Modern, professional design that attracts attention
-* Smooth animations and micro-interactions
-* Mobile-first responsive approach
-* Optimized performance and accessibility
-* Clean, maintainable code structure
+### 🧭 Conseil & accompagnement
+Audit technique, optimisation de performance et accompagnement digital pour PME.
 
 ---
 
-## 📱 Features
+## 🧰 Stack principale
 
-* **Responsive Design:** Perfectly adapted for all devices
-* **Premium Animations:** Subtle parallax effects and smooth transitions
-* **SEO Optimized:** Enhanced for search engines
-* **Fast Loading:** Optimized performance
-* **Accessible:** Following web accessibility guidelines
+Je ne me définis pas par des outils, mais voici ma base technique :
 
----
-
-## 🚀 Quick Start
-
-Want to run this portfolio locally?
-
-```bash
-# Clone the repository
-git clone https://github.com/layesall/cvitae.git
-
-# Navigate to project directory
-cd cvitae
-
-# Open index.html in your browser
-# Or serve with a local server:
-python -m http.server 8000
-
-# Then visit http://localhost:8000
-```
+- **Backend :** Python, Django
+- **Frontend :** React, Next.js, TypeScript
+- **Data :** SQL / PostgreSQL
+- **E-commerce :** Shopify
+- **Autres :** Go (en cours d’approfondissement)
 
 ---
 
-## 📊 GitHub Stats
+## 📦 Projets
 
-![Layesall's GitHub Stats](https://github-readme-stats.vercel.app/api?username=layesall\&theme=transparent\&hide_border=true\&show_icons=true\&count_private=true)
-
----
-
-## 🤝 Let's Work Together
-
-I'm always interested in new opportunities and exciting projects. Whether you need a web application, mobile app, or just want to discuss tech — I'm here for you!
-
-📧 **Email:** [ulayesall@gmail.com](mailto:ulayesall@gmail.com)
-🔗 **LinkedIn:** Coming Soon
-📍 **Location:** Brussels, Belgium
+### 🧠 FAMILIZ
+Mini ERP pour gestion familiale (membres, tâches, finances, événements).
+- **Stack :** Go, HTML, SQLite
+- **Statut :** Actif
 
 ---
 
-### 🛠️ Built with ❤️ and determination by **Layesall – 2024**
+### 🛒 NAJOHAIR
+Boutique Shopify dédiée aux produits capillaires.
+- Design sur mesure
+- Expérience d’achat optimisée
+- Paiement sécurisé
+- **Stack :** Shopify, Liquid
+- **Statut :** En production
+- 🌐 https://najohair.com
+
+---
+
+### 🌐 Portfolio personnel
+Ce site que vous consultez actuellement.
+- Design minimal et moderne
+- Animations fluides
+- Focus conversion et clarté
+- **Stack :** Next.js, TypeScript, Tailwind
+
+---
+
+### 🎫 Zabani Event
+Plateforme de gestion d’événements (création, réservation, paiement).
+- **Stack :** Django, Stripe, SQLite
+- **Statut :** En développement
+
+---
+
+## 🎯 Vision
+
+Je ne crée pas juste des sites.
+
+Je crée des **produits digitaux utiles**, pensés pour :
+- résoudre un problème réel
+- être rapides et simples
+- évoluer dans le temps
+
+---
+
+## 🤝 Travaillons ensemble
+
+Tu as :
+- une idée de SaaS
+- une boutique Shopify à améliorer
+- un outil interne à construire
+- ou besoin d’un audit technique
+
+👉 On peut en discuter.
+
+📧 Email : contact@layesall.com  
+📍 Bruxelles / Remote
+
+---
+
+## 🛠️ Stack du projet portfolio
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+---
+
+## ❤️ Build philosophy
+
+Simple. Rapide. Utile. Durable.
