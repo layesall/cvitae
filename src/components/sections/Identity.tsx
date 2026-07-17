@@ -16,7 +16,7 @@ export default function Identity({ data }: IdentityProps) {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.1 }}
-      className="flex flex-col items-center lg:items-start gap-2 sm:gap-3"
+      className="flex flex-col items-center lg:items-center gap-2 sm:gap-3"
     >
       <Badge variant={badge.variant}>{badge.text}</Badge>
       <h2 className="font-[family-name:var(--font-display)] text-4xl font-bold tracking-tight text-center lg:text-left">

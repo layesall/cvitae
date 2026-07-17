@@ -11,7 +11,10 @@ import LocaleToggle from "@/components/ui/LocaleToggle";
 import { useHomeData } from "@/hooks/useLocaleData";
 
 export default function HomePage() {
-  const { badge, identity, title, description, image, services, stats, actions, footer } = useHomeData();
+  const { 
+    badge, identity, title, image, 
+    services, serviceCtaLabel, stats, actions, footer 
+  } = useHomeData();
 
   return (
     <main className="min-h-screen flex flex-col px-4 sm:px-6 lg:px-8 py-4 sm:py-6 relative">
@@ -20,35 +23,31 @@ export default function HomePage() {
         <LocaleToggle />
       </div>
 
-      <div className="max-w-5xl mx-auto w-full flex-1 flex flex-col justify-center gap-4 sm:gap-6 pt-10 sm:pt-0">
-        
-        {/* TOP: Avatar + Identity + Content */}
-        <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+      {/* Contenu principal */}
+      <div className="max-w-6xl mx-auto w-full flex-1 flex flex-col justify-center pt-10 sm:pt-0">
+        {/* Grille LEFT / RIGHT */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-10">
           
-          {/* LEFT: Avatar */}
-          <div className="flex flex-col items-center gap-3 sm:gap-4 shrink-0">
-            <Avatar src={image.src} alt={image.alt} size={280} />
-          </div>
-          
-          {/* RIGHT: Identity + Hero + Stats + Actions */}
-          <div className="flex flex-col gap-2 sm:gap-3 min-w-0 flex-1 items-center lg:items-start text-center lg:text-left">
+          {/* LEFT : identité */}
+          <div className="flex flex-col items-center lg:items-center text-center lg:text-left gap-3 justify-center">
+            <Avatar src={image.src} alt={image.alt} size={180} />
             <Identity data={{ badge, identity }} />
-            <HeroContent data={{ title, description }} />
+            <HeroContent data={{ title }} />
             <Stats stats={stats} />
-            <div className="flex flex-row gap-2 sm:gap-3 mt-2">
+          </div>
+
+          {/* RIGHT : services */}
+          <div className="flex flex-col justify-center gap-3 lg:items-end">
+            <div className="flex flex-row gap-2 mt-2 lg:justify-end">
               <ActionButtons data={actions} />
             </div>
+            <ServiceCards services={services} ctaLabel={serviceCtaLabel} />
           </div>
-        </div>
-
-        {/* MIDDLE: Services */}
-        <div className="w-full">
-          <ServiceCards services={services} />
         </div>
       </div>
 
-      {/* BOTTOM: Footer */}
-      <div className="max-w-5xl mx-auto w-full pt-4 sm:pt-6">
+      {/* BOTTOM : footer */}
+      <div className="max-w-6xl mx-auto w-full pt-4">
         <Footer data={footer} />
       </div>
     </main>
