@@ -16,12 +16,12 @@ export interface HomeData {
     main: string;
     highlight: string;
   };
-  description: string;
   image: {
     src: string;
     alt: string;
   };
   services: ServiceItem[];
+  serviceCtaLabel?: string;
   stats: StatItem[];
   actions: {
     primary: ActionButton;
@@ -37,12 +37,12 @@ export interface ServiceItem {
   subtitle: string;
   description?: string;
   calSlug?: string;
-  stack: string[];
 }
 
 export interface StatItem {
+  icon: string;
   value: string;
-    label: string;
+  label: string;
 }
 
 export interface ActionButton {
@@ -55,6 +55,7 @@ export interface ActionButton {
 export interface FooterData {
   copyright: string;
   socials: SocialLink[];
+  legalLink?: { label: string; href: string };
 }
 
 export interface SocialLink {
@@ -71,7 +72,6 @@ export interface ProjectsPageData {
   projects: Project[];
   ui: {
     backLabel: string;
-    statusLabels: Record<string, string>;
     noImageText: string;
   };
 }
@@ -80,9 +80,26 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  status: 'active' | 'development';
   year: number;
   tags: string[];
   image?: string;
   link?: string;
+}
+
+// --- Legal Mentions ---
+export interface LegalItem {
+  id: string;
+  content: string; // peut contenir du HTML simple (balises <strong>, <a>, etc.)
+}
+
+export interface LegalSection {
+  id: string;
+  title: string;
+  items: LegalItem[];
+}
+
+export interface LegalData {
+  title: string;
+  backLabel: string;
+  sections: LegalSection[];
 }
