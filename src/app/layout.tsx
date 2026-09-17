@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { I18nProvider } from "@/context/I18nContext";
+import Footer from "@/components/layout/Footer";
 
 // Metadata dynamique selon la locale
 const metadataByLocale = {
@@ -81,7 +82,16 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="overflow-x-hidden">
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          <div className="min-h-[100svh] flex flex-col">
+            <div className="flex-1">
+              {children}
+            </div>
+            <div className="container-page">
+              <Footer />
+            </div>
+          </div>
+        </I18nProvider>
       </body>
     </html>
   );
