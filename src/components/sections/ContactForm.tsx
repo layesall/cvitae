@@ -10,10 +10,12 @@ import {
   type ContactSubjectKey,
 } from "@/lib/utils";
 import { useHomeData } from "@/hooks/useLocaleData";
+import { useI18n } from "@/context/I18nContext";
 
 type FieldErrors = Partial<Record<keyof ContactFormData, string>>;
 
 export default function ContactForm() {
+  const { locale } = useI18n();
   const { contactForm } = useHomeData();
   const {
     labels,
@@ -73,7 +75,10 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(result.data),
+        body: JSON.stringify({
+          ...result.data,
+          locale,
+        }),
       });
 
       if (res.ok) {

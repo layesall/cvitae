@@ -158,24 +158,35 @@ export default function Services({
                   </ul>
                 </div>
 
-                {/* Prix + durée */}
-                <div className="mt-auto flex items-end justify-between border-t border-border/60 pt-6 mb-6">
-                  <div>
-                    <div className="t-mono-sm text-text-dim uppercase mb-1">
-                      Tarif
+                {/* Prix + durée + note */}
+                <div className="mt-auto border-t border-border/60 pt-6 mb-6">
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <div className="t-mono-sm text-text-dim uppercase mb-1">
+                        Tarif
+                      </div>
+                      <div className="font-[family-name:var(--font-display)] text-2xl font-semibold">
+                        {service.price}
+                      </div>
                     </div>
-                    <div className="font-[family-name:var(--font-display)] text-2xl font-semibold">
-                      {service.price}
+                    <div className="text-right">
+                      <div className="t-mono-sm text-text-dim uppercase mb-1">
+                        Délai
+                      </div>
+                      <div className="t-body text-text-muted">
+                        {service.duration}
+                      </div>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="t-mono-sm text-text-dim uppercase mb-1">
-                      Délai
+
+                  {/* Note optionnelle (ex: "Domaine à charge") */}
+                  {service.note && (
+                    <div className="mt-3 pt-3 border-t border-border/40">
+                      <span className="t-mono-sm text-text-dim/80">
+                        ✦ {service.note}
+                      </span>
                     </div>
-                    <div className="t-body text-text-muted">
-                      {service.duration}
-                    </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* CTA */}
