@@ -1,7 +1,5 @@
 # README.md — version épurée
 
-Le README d'un repo sert à **documenter le projet**, pas à refaire le pitch commercial (qui est déjà sur le site). Voici la version stricte.
-
 ```markdown
 # Layesall
 
