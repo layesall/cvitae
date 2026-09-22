@@ -1,16 +1,7 @@
-# README.md — version épurée
-
-Le README d'un repo sert à **documenter le projet**, pas à refaire le pitch commercial (qui est déjà sur le site). Voici la version stricte.
-
-```markdown
-# Layesall
-
-Portfolio freelance — [layesall.com](https://layesall.com)
+# [Layesall.com](https://layesall.com)
 
 Site vitrine présentant mes services de développement web et de conseil IT.
 Cible : indépendants, PME et entreprises cherchant un développeur freelance.
-
----
 
 ## Stack
 
@@ -21,8 +12,6 @@ Cible : indépendants, PME et entreprises cherchant un développeur freelance.
 - **Validation** : Zod
 - **Email** : Brevo (API transactionnelle)
 - **Hébergement** : GitHub Pages (statique) + Route Handler Next.js (contact)
-
----
 
 ## Structure
 
@@ -48,23 +37,21 @@ src/
 └── types/            # Types partagés
 ```
 
----
-
 ## Développement
 
 ```bash
 # Installation
-pnpm install
+npm install
 
 # Variables d'environnement
 cp .env.example .env.local
 # → renseigner BREVO_API_KEY, BREVO_SENDER_EMAIL, BREVO_SENDER_NAME, CONTACT_RECEIVER_EMAIL
 
 # Serveur de dev
-pnpm dev
+npm dev
 
 # Build production
-pnpm build
+npm build
 ```
 
 ---
