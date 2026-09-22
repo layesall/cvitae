@@ -39,7 +39,7 @@ export default function Process({
       <div className="container-page">
 
         {/* ── En-tête de section ── */}
-        <div className="flex flex-col gap-6 mb-16 lg:mb-20 max-w-3xl">
+        <div className="flex flex-col gap-6 mb-16 lg:mb-24 max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -75,90 +75,146 @@ export default function Process({
           </motion.p>
         </div>
 
-        {/* ── Timeline des étapes ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:gap-10 lg:gap-8">
-          {steps.map((step, i) => {
-            const Icon = iconMap[step.icon];
-            const isLast = i === steps.length - 1;
+        {/* ── Timeline ── */}
+        <div className="relative">
 
-            return (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative flex flex-col"
-              >
-                {/* ── Numéro géant + ligne horizontale ── */}
-                <div className="flex items-center gap-5 mb-10">
-                  <span
-                    className="
-                      font-[family-name:var(--font-display)]
-                      text-[3.25rem] lg:text-[2.75rem]
-                      font-semibold leading-none tracking-[-0.04em]
-                      text-accent
-                    "
-                  >
-                    {step.number}
-                  </span>
-                  {!isLast && (
+          {/* Ligne connectrice — desktop (horizontale, centre des nœuds) */}
+          <div
+            aria-hidden
+            className="
+              hidden lg:block
+              absolute top-[22px] left-0 right-0
+              h-px
+              bg-gradient-to-r
+              from-border-strong/30
+              via-border-strong/60
+              to-border-strong/30
+              pointer-events-none
+            "
+          />
+
+          {/* Ligne connectrice — mobile (verticale) */}
+          <div
+            aria-hidden
+            className="
+              lg:hidden
+              absolute left-[19px] top-4 bottom-4
+              w-px
+              bg-gradient-to-b
+              from-border-strong/60
+              via-border-strong/40
+              to-border-strong/20
+              pointer-events-none
+            "
+          />
+
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-5 items-stretch">
+            {steps.map((step, i) => {
+              const Icon = iconMap[step.icon];
+
+              return (
+                <motion.div
+                  key={step.number}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="
+                    relative flex gap-5
+                    lg:flex-col lg:gap-0
+                    lg:h-full
+                  "
+                >
+                  {/* ── Nœud ──
+                      Mobile : à gauche, sur la ligne verticale
+                      Desktop : à cheval sur le bord supérieur de la card
+                  */}
+                  <div className="shrink-0 lg:absolute lg:top-0 lg:left-5 lg:z-10">
                     <div
                       className="
-                        hidden lg:block flex-1 h-px
-                        bg-gradient-to-r
-                        from-border-strong
-                        via-border-strong/50
-                        to-transparent
+                        relative
+                        w-10 h-10 rounded-full
+                        bg-accent text-bg
+                        flex items-center justify-center
+                        font-[family-name:var(--font-display)]
+                        text-[12px] font-bold tracking-wide
+                        ring-4 ring-bg
+                        shadow-[0_0_20px_-4px_rgba(240,235,224,0.3)]
                       "
-                    />
-                  )}
-                </div>
+                    >
+                      {step.number}
+                    </div>
+                  </div>
 
-                {/* ── Icône ── */}
-                <div
-                  className="
-                    w-14 h-14 rounded-2xl
-                    bg-bg-card border border-border-strong
-                    flex items-center justify-center
-                    mb-7
-                  "
-                >
-                  <Icon
-                    className="w-6 h-6 text-text"
-                    strokeWidth={1.6}
-                  />
-                </div>
+                  {/* ── Carte ──
+                      Desktop : flex-col + h-full pour égaliser la hauteur
+                      La description prend tout l'espace restant (flex-1)
+                  */}
+                  <div
+                    className="
+                      flex flex-col flex-1 min-w-0
+                      lg:w-full lg:h-full
+                      bg-bg-card/60
+                      border border-border
+                      rounded-2xl
+                      p-5 lg:pt-10
+                      transition-colors duration-300
+                      hover:border-border-strong hover:bg-bg-card
+                    "
+                  >
+                    {/* Header : icône + badge durée */}
+                    <div className="flex items-center justify-between gap-3 mb-4">
+                      <div
+                        className="
+                          w-9 h-9 rounded-xl shrink-0
+                          bg-bg-elevated border border-border
+                          flex items-center justify-center
+                        "
+                      >
+                        <Icon
+                          className="w-[18px] h-[18px] text-text-muted"
+                          strokeWidth={1.6}
+                        />
+                      </div>
 
-                {/* ── Titre ── */}
-                <h3 className="t-h3 font-[family-name:var(--font-display)] font-semibold mb-4 leading-tight">
-                  {step.title}
-                </h3>
+                      <span
+                        className="
+                          inline-flex items-center gap-1.5
+                          px-2.5 py-1 rounded-full
+                          bg-accent/[0.08]
+                          border border-accent/20
+                          font-[family-name:var(--font-mono)]
+                          text-[10px] font-medium tracking-[0.1em]
+                          text-accent uppercase
+                          whitespace-nowrap
+                        "
+                      >
+                        <span className="w-1 h-1 rounded-full bg-accent" />
+                        {step.duration}
+                      </span>
+                    </div>
 
-                {/* ── Badge durée ── */}
-                <span
-                  className="
-                    inline-flex items-center gap-2 w-fit
-                    px-3 py-1.5 mb-5
-                    rounded-full
-                    bg-accent/[0.08]
-                    border border-accent/20
-                    font-[family-name:var(--font-mono)]
-                    text-[11px] font-medium tracking-[0.12em]
-                    text-accent uppercase
-                  "
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-                  {step.duration}
-                </span>
+                    {/* Titre */}
+                    <h3
+                      className="
+                        font-[family-name:var(--font-display)]
+                        text-[17px] font-semibold leading-tight
+                        tracking-[-0.01em]
+                        mb-2.5
+                      "
+                    >
+                      {step.title}
+                    </h3>
 
-                {/* ── Description ── */}
-                <p className="t-body text-text-muted leading-relaxed">
-                  {step.description}
-                </p>
-              </motion.div>
-            );
-          })}
+                    {/* Description — flex-1 pour pousser vers le bas si besoin */}
+                    <p className="t-body text-text-muted leading-relaxed text-[13.5px] flex-1">
+                      {step.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
 
         {/* ── Note de bas de section ── */}
@@ -167,7 +223,7 @@ export default function Process({
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-20 pt-8 border-t border-border/60 flex flex-wrap items-center justify-center gap-x-8 gap-y-3"
+          className="mt-14 lg:mt-20 pt-8 border-t border-border/60 flex flex-wrap items-center justify-center gap-x-8 gap-y-3"
         >
           <span className="t-mono-sm text-text-dim">
             ✦ Zéro engagement
