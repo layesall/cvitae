@@ -1,46 +1,41 @@
 import { ButtonVariant } from "@/components/ui/Button";
 import { BadgeVariant } from "@/components/ui/Badge";
 
+/* ─────────────────────────────────────────────
+   HOME
+   ───────────────────────────────────────────── */
+
 export interface HomeData {
   id: string;
-
   badge: {
     text: string;
     variant: BadgeVariant;
   };
-
   identity: {
     name: string;
   };
-
   title: {
     main: string;
     highlight: string;
   };
-
   subtitle: string;
-
   heroBadges: {
     availability: string;
     quote: string;
   };
-
   image: {
     src: string;
     alt: string;
     flipX?: boolean;
   };
-
   services: ServiceItem[];
-
-   process: {
+  process: {
     eyebrow: string;
     titleMain: string;
     titleHighlight: string;
     subtitle: string;
     steps: ProcessStep[];
   };
-
   featuredProjects: {
     eyebrow: string;
     titleMain: string;
@@ -50,7 +45,6 @@ export interface HomeData {
     ctaHref: string;
     items: Project[];
   };
-
   faq: {
     eyebrow: string;
     titleMain: string;
@@ -58,18 +52,18 @@ export interface HomeData {
     subtitle: string;
     items: FAQItem[];
   };
-
   finalCta: FinalCTA;
-
   contactForm: ContactFormData;
-
   actions: {
     primary: ActionButton;
     secondary?: ActionButton;
   };
-
   footer: FooterData;
 }
+
+/* ─────────────────────────────────────────────
+   SERVICES
+   ───────────────────────────────────────────── */
 
 export interface ServiceItem {
   id: string;
@@ -79,11 +73,16 @@ export interface ServiceItem {
   description: string;
   deliverables: string[];
   price: string;
+  note?: string;
   duration: string;
   ctaText: string;
   ctaHref: string;
   accent: "accent" | "accent-2";
 }
+
+/* ─────────────────────────────────────────────
+   ACTIONS
+   ───────────────────────────────────────────── */
 
 export interface ActionButton {
   text: string;
@@ -92,19 +91,10 @@ export interface ActionButton {
   icon?: boolean;
 }
 
-export interface FooterData {
-  copyright: string;
-  socials: SocialLink[];
-  legalLink?: { label: string; href: string };
-}
+/* ─────────────────────────────────────────────
+   PROCESS
+   ───────────────────────────────────────────── */
 
-export interface SocialLink {
-  id: string;
-  label: string;
-  href: string;
-}
-
-// ── Process ─────────────────────────────────────
 export interface ProcessStep {
   number: string;
   icon: string;
@@ -113,7 +103,9 @@ export interface ProcessStep {
   description: string;
 }
 
-/* ── Projets ──────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   PROJETS
+   ───────────────────────────────────────────── */
 
 export interface ProjectsPageData {
   header: {
@@ -139,18 +131,28 @@ export interface Project {
   subtitle?: string;
   role?: string;
   duration?: string;
-  status?: string; 
+  status?: string;
   featured?: boolean;
 }
 
-// ── FAQ ────────────────────────────────────────
+/* ─────────────────────────────────────────────
+   FAQ
+   ───────────────────────────────────────────── */
+
 export interface FAQItem {
   id: string;
   question: string;
   answer: string;
 }
 
-// ── CTA Final ──────────────────────────────────
+/* ─────────────────────────────────────────────
+   FINAL CTA
+   ─────────────────────────────────────────────
+   Note : `email` et `emailFallback` sont optionnels.
+   Laisse-les vides ou retire-les des data pour éviter
+   d'exposer une adresse email en clair (anti-spam).
+   ───────────────────────────────────────────── */
+
 export interface FinalCTA {
   eyebrow: string;
   titleLine1: string;
@@ -164,54 +166,10 @@ export interface FinalCTA {
   reassurance: string[];
 }
 
-// ── Footer ─────────────────────────────────────
-export interface FooterData {
-  tagline: string;
-  copyright: string;
-  email: string;
-  socials: SocialLink[];
-  pagesLabel: string;
-  pages: FooterLink[];
-  quickCta: {
-    title: string;
-    description: string;
-    buttonText: string;
-  };
-  madeIn: string;
-  legalLink?: { label: string; href: string };
-}
+/* ─────────────────────────────────────────────
+   CONTACT FORM
+   ───────────────────────────────────────────── */
 
-export interface FooterLink {
-  id: string;
-  label: string;
-  href: string;
-}
-
-export interface SocialLink {
-  id: string;
-  label: string;
-  href: string;
-}
-/* ── Mentions légales ─────────────────────────── */
-
-export interface LegalItem {
-  id: string;
-  content: string;
-}
-
-export interface LegalSection {
-  id: string;
-  title: string;
-  items: LegalItem[];
-}
-
-export interface LegalData {
-  title: string;
-  backLabel: string;
-  sections: LegalSection[];
-}
-
-// ── Contact Form ───────────────────────────────
 export interface ContactFormLabels {
   firstName: string;
   lastName: string;
@@ -262,4 +220,59 @@ export interface ContactFormData {
     messageMax: string;
     messageUnsafe: string;
   };
+}
+
+/* ─────────────────────────────────────────────
+   FOOTER
+   ─────────────────────────────────────────────
+   Note : `email` est optionnel. Retire-le des data
+   si tu veux éviter de rendre l'adresse publique.
+   ───────────────────────────────────────────── */
+
+export interface FooterData {
+  tagline: string;
+  copyright: string;
+  socials: SocialLink[];
+  pagesLabel: string;
+  pages: FooterLink[];
+  quickCta: {
+    title: string;
+    description: string;
+    buttonText: string;
+  };
+  madeIn: string;
+  legalLink?: { label: string; href: string };
+}
+
+export interface FooterLink {
+  id: string;
+  label: string;
+  href: string;
+}
+
+export interface SocialLink {
+  id: string;
+  label: string;
+  href: string;
+}
+
+/* ─────────────────────────────────────────────
+   MENTIONS LÉGALES
+   ───────────────────────────────────────────── */
+
+export interface LegalItem {
+  id: string;
+  content: string;
+}
+
+export interface LegalSection {
+  id: string;
+  title: string;
+  items: LegalItem[];
+}
+
+export interface LegalData {
+  title: string;
+  backLabel: string;
+  sections: LegalSection[];
 }
