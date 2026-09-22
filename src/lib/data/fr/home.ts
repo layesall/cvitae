@@ -2,28 +2,22 @@ import { HomeData } from "@/types";
 
 export const homeDataFR: HomeData = {
   id: "home",
-
   badge: {
     text: "Freelance disponible • Remote / Bruxelles",
     variant: "success",
   },
-
   identity: {
-    name: "Layesall.",
+    name: "Layesall",
   },
-
   title: {
-    main: "Sites web qui",
-    highlight: "travaillent pour vous.",
+    main: "Transformez vos visiteurs",
+    highlight: "en clients.",
   },
-
-  subtitle: "Je conçois, je code, je livre. Sans intermédiaire.",
-
+  subtitle: "Design, code, mise en ligne — en semaines, pas en mois.",
   heroBadges: {
     availability: "Dispo immédiate",
     quote: "Devis en 48h",
   },
-
   image: {
     src: "/images/meprofile.png",
     alt: "Layesall — Développeur web freelance",
@@ -143,8 +137,8 @@ export const homeDataFR: HomeData = {
         year: 2026,
         category: "Site personnel",
         tags: ["Next.js", "Tailwind", "Framer Motion"],
-        image: "/images/portfolio.png",
-        link: "#",
+        image: "/images/layesall.png",
+        link: "/",
       },
       {
         id: "najohair",
