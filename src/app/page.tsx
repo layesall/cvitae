@@ -50,32 +50,6 @@ export default function HomePage() {
   return (
     <main className="relative min-h-[100svh] flex flex-col">
 
-      {/* Top-bar */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-bg/60 border-b border-border/60">
-        <div className="container-page flex items-center justify-between py-4">
-          <Link
-            href="/"
-            className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight"
-          >
-            {identity.name.replace(".", "")}
-            <span className="dot-accent">.</span>
-          </Link>
-
-          <div className="flex items-center gap-3">
-            <LocaleToggle />
-            {actions.primary && (
-              <Link
-                href={actions.primary.href}
-                className="hidden sm:inline-flex btn-accent !py-2 !px-4 !text-xs"
-              >
-                {actions.primary.text}
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
-            )}
-          </div>
-        </div>
-      </header>
-
       {/* Hero */}
       <Hero data={{ badge, title, subtitle, image, actions, heroBadges }} />
 

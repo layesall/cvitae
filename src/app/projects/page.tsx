@@ -1,6 +1,5 @@
 "use client";
 
-import PageHeader from "@/components/layout/PageHeader";
 import ProjectsHero from "@/components/projects/ProjectsHero";
 import ProjectShowcase from "@/components/projects/ProjectShowcase";
 import ProjectsCta from "@/components/projects/ProjectsCta";
@@ -35,8 +34,6 @@ export default function ProjectsPage() {
 
   return (
     <main className="relative min-h-[100svh] flex flex-col">
-      <PageHeader />
-
       <ProjectsHero
         tag={header.tag}
         title={header.title}
