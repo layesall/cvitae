@@ -1,27 +1,25 @@
-
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import LocaleToggle from "@/components/ui/LocaleToggle";
 import { useHomeData } from "@/hooks/useLocaleData";
 
-interface PageHeaderProps {
-  showCta?: boolean;
-}
-
-export default function PageHeader({ showCta = true }: PageHeaderProps) {
+export default function Header() {
+  const pathname = usePathname();
   const { identity, actions } = useHomeData();
+
+  const showCta = pathname !== "/legal";
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-bg/60 border-b border-border/60">
       <div className="container-page flex items-center justify-between py-4">
         <Link
           href="/"
-          className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight"
+          className="font-[family-name:var(--font-display)] text-4xl font-semibold tracking-tight"
         >
-          {identity.name.replace(".", "")}
-          <span className="dot-accent">.</span>
+          {identity.name}
         </Link>
 
         <div className="flex items-center gap-3">
