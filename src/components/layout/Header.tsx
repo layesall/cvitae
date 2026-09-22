@@ -17,7 +17,7 @@ export default function Header() {
       <div className="container-page flex items-center justify-between py-4">
         <Link
           href="/"
-          className="font-[family-name:var(--font-display)] text-4xl font-semibold tracking-tight"
+          className="font-[family-name:var(--font-display)] font-semibold tracking-tight"
         >
           {identity.name}
         </Link>
