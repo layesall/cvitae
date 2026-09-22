@@ -1,66 +1,87 @@
-# 👋 Layesall — Produits web, SaaS & Shopify
+# README.md — version épurée
 
-> **De l’idée au produit.**  
-> Je conçois des solutions web simples, rapides et utiles pour entrepreneurs, indépendants et PME.
+Le README d'un repo sert à **documenter le projet**, pas à refaire le pitch commercial (qui est déjà sur le site). Voici la version stricte.
 
----
+```markdown
+# Layesall
 
-## 💼 Ce que je fais
+Portfolio freelance — [layesall.com](https://layesall.com)
 
-| Domaine | Détail |
-|---------|--------|
-| **Web Apps & SaaS** | Plateformes, dashboards, outils métier sur mesure |
-| **Shopify & E‑commerce** | Boutiques performantes, design & conversion |
-| **Backend & APIs** | Architectures solides, bases de données, intégrations |
-| **Conseil technique** | Audit, optimisation, accompagnement stratégique |
+Site vitrine présentant mes services de développement web et de conseil IT.
+Cible : indépendants, PME et entreprises cherchant un développeur freelance.
 
 ---
 
-## 🧰 Stack principale
+## Stack
 
-- **Backend :** Python · Django  
-- **Frontend :** React · Next.js · TypeScript · Tailwind  
-- **Data :** PostgreSQL · SQLite  
-- **E‑commerce :** Shopify · Liquid  
-- **Infra :** Docker · CI/CD · DevOps
-
----
-
-## 📦 Projets récents
-
-| Projet | Description | Stack |
-|--------|-------------|-------|
-| **FAMILIZ** | ERP familial (membres, finances, événements) | Go, SQLite, HTML |
-| **NAJOHAIR** | Boutique Shopify pour produits capillaires | Shopify, Liquid |
-| **KOOGIT** | SaaS pour artisans, vente en live (TikTok, FB) | Django, Next.js, Mobile Money |
+- **Framework** : Next.js 15 (App Router)
+- **Langage** : TypeScript
+- **Styles** : Tailwind CSS v4
+- **Animations** : Framer Motion
+- **Validation** : Zod
+- **Email** : Brevo (API transactionnelle)
+- **Hébergement** : GitHub Pages (statique) + Route Handler Next.js (contact)
 
 ---
 
-## 🎯 Vision
+## Structure
 
-Je ne construis pas juste des sites.  
-Je construis **des produits digitaux utiles** — pensés pour résoudre un problème, évoluer dans le temps et rester simples.
+```
+src/
+├── app/              # Pages (App Router)
+│   ├── page.tsx      # Home
+│   ├── projects/     # Showcase projets
+│   ├── legal/        # Mentions légales
+│   └── api/contact/  # Route Handler Brevo
+├── components/
+│   ├── layout/       # Header, Footer
+│   ├── sections/     # Hero, Services, Process, FAQ, FinalCTA…
+│   ├── projects/     # Showcase, CTA projets
+│   └── legal/        # TOC, contenu
+├── context/          # I18nProvider
+├── hooks/            # useHomeData, useProjectsData
+├── lib/
+│   ├── data/fr/      # Contenu FR
+│   ├── data/en/      # Contenu EN
+│   ├── email/        # Templates email (HTML + texte)
+│   └── utils.ts      # Schémas Zod, helpers
+└── types/            # Types partagés
+```
 
 ---
 
-## 📬 Contact
+## Développement
 
-Tu as une idée, un projet ou besoin d’un avis technique ?
+```bash
+# Installation
+pnpm install
 
-👉 **Planifie un appel** (20 min offertes)
-📍 Bruxelles / Remote
+# Variables d'environnement
+cp .env.example .env.local
+# → renseigner BREVO_API_KEY, BREVO_SENDER_EMAIL, BREVO_SENDER_NAME, CONTACT_RECEIVER_EMAIL
+
+# Serveur de dev
+pnpm dev
+
+# Build production
+pnpm build
+```
 
 ---
 
-## 🛠️ Stack du portfolio
+## i18n
 
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- Framer Motion
+Le contenu est séparé par locale et par domaine :
+
+- `src/lib/data/fr/home.ts` · `src/lib/data/en/home.ts`
+- `src/lib/data/fr/projects.ts` · `src/lib/data/en/projects.ts`
+- `src/lib/data/fr/legal.ts` · `src/lib/data/en/legal.ts`
+
+Le point d'entrée `src/lib/data/index.ts` agrège tout et expose `DATA[locale][domain]`.
+Le toggle FR/EN se fait via `I18nContext` (`useI18n()`).
 
 ---
 
-## ⚡️ Build philosophy
+## Contact
 
-**Simple. Rapide. Utile. Durable.**
+Formulaire sur `/#contact` → API Brevo transactionnelle (pas de stockage en base).
